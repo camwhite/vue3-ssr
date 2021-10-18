@@ -1,5 +1,5 @@
 <template>
-  <hello-world msg="Hello Vue 3 + Bite" />
+  <hello-world msg="Hello Vue 3 + Vite" />
 </template>
 
 <script setup>
