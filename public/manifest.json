@@ -1,6 +1,6 @@
 {
-  "name": "Becasuse it's the Earth",
-  "short_name": "Bite",
+  "name": "Vue3 + Vite SSR",
+  "short_name": "Vue3 + Vite SSR",
   "theme_color": "#4144BF",
   "background_color": "#fff",
   "display": "standalone",
@@ -21,11 +21,6 @@
     {
       "src": "images/icons/icon-128x128.png",
       "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "images/icons/icon-144x144.png",
-      "sizes": "144x144",
       "type": "image/png"
     },
     {

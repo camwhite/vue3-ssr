@@ -1,23 +1,14 @@
 <template>
-  <div
-    class="relative"
-    @mouseenter="isOpen = true"
-    @mouseleave="isOpen = false"
-  >
+  <div class="relative" @mouseenter="isOpen = true" @mouseleave="isOpen = false">
     <button>collections</button>
-    <ul
-      class="fixed flex flex-col top-100 bg-white"
-      v-if="isOpen"
-    >
-      <li
-        class="p-2"
-        v-for="collection of collection.collections"
-      >
+    <ul class="fixed flex flex-col top-100 bg-white" v-if="isOpen">
+      <li class="p-2" v-for="collection of collection.collections">
         <router-link
           :to="`/collections/${collection.handle}`"
           active-class="underline"
-          >{{ collection.title }}</router-link
         >
+          {{ collection.title }}
+        </router-link>
       </li>
     </ul>
   </div>

@@ -1,45 +1,21 @@
 <template>
-  <nav class="fixed h-16 flex items-center w-full bg-white">
-    <router-link
-      to="/"
-      class="px-2 transform transition-all"
-      active-class="scale-125 -rotate-12"
-      exact
-    >
-      <img
-        alt="Bite logo"
-        class="h-12 p-2 flex-shrink"
-        src="./assets/logo.svg"
-      />
-    </router-link>
-    <ul class="flex justify-around w-48">
-      <li>
-        <router-link to="/todos" active-class="underline"
-          >todos</router-link
-        >
-      </li>
-      <li>
-        <collection-dropdown />
-      </li>
-    </ul>
-  </nav>
-  <router-view :key="route.fullPath" v-slot="{ Component }">
-    <suspense>
-      <main class="min-h-screen flex flex-col pt-16 px-2">
+  <nav-bar></nav-bar>
+  <main class="min-h-screen flex flex-col pt-16 px-2">
+    <router-view :key="route.fullPath" v-slot="{ Component }">
+      <suspense>
         <component :is="Component" />
-      </main>
-      <template #fallback>
-        <p class="pt-16">
-          Loading...
-        </p>
-      </template>
-    </suspense>
-  </router-view>
+        <template #fallback>
+          <loader></loader>
+        </template>
+      </suspense>
+    </router-view>
+  </main>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
-import CollectionDropdown from './components/CollectionDropdown.vue'
+import Loader from './components/Loader.vue'
+import NavBar from './components/NavBar.vue'
 
 const route = useRoute()
 </script>

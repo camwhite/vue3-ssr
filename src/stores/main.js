@@ -25,9 +25,7 @@ export const useMainStore = defineStore({
   // optional actions
   actions: {
     async getTodos() {
-      const response = await ky.get(
-        'https://jsonplaceholder.typicode.com/todos'
-      )
+      const response = await ky.get('https://jsonplaceholder.typicode.com/todos')
       this.todos = await response.json()
     }
   }
