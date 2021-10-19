@@ -1,5 +1,5 @@
 {
-  "name": "vue3-ssr",
+  "name": "bite-headless-poc",
   "version": "0.0.0",
   "scripts": {
     "dev": "node server",
