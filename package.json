@@ -1,5 +1,5 @@
 {
-  "name": "bite-headless-poc",
+  "name": "vite-headless-starter",
   "version": "0.0.0",
   "scripts": {
     "dev": "node server",
